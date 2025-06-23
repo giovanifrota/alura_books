@@ -1,10 +1,10 @@
 const botoes = document.querySelectorAll('.btn');
 
-botoes.forEach(btn => btn.addEventListener('click', filtrarLivros));
+botoes.forEach(btn => btn.addEventListener('click', livrosFiltrados));
 
-function filtrarLivros(){
+function livrosFiltrados(){
     const elementoBtn = document.getElementById(this.id);
     const categoria = elementoBtn.value;
-    let livrosFiltrados = livros.filter(livro => livro.categoria == categoria);
-    console.table(livrosFiltrados);
-} 
+    let livrosFiltados = livros.filter(livro => livro.categoria == categoria);
+    exibirLivrosNaTela(livrosFiltados)
+}
